@@ -42,8 +42,4 @@ def find_restaurant
 end
 
 
-
-
-
-
 end
