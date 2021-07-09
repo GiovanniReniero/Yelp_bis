@@ -1,0 +1,19 @@
+<h6>This is the restaurants_show index page</h6>
+<br>
+<br>
+<br>
+
+
+<h1><%= "#{@restaurant.name}" %></h1>
+<h3> <%= "#{@restaurant.address}" %></h3>
+<h4> <%= "#{@restaurant.category}" %> </h4>
+<h5>  <%= "#{@restaurant.phone_number}" %>  </h5>
+<br>
+<br>
+<a > <%= link_to "Back to Restaurants", restaurants_path %></a>
+<br>
+<br>
+<a > <%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant) %></a>
+<br>
+<br>
+<a > <%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :delete %></a>

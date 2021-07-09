@@ -1,0 +1,10 @@
+
+
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: "Restaurant Name" %>
+  <%= f.input :address, label: "Restaurant Address" %>
+  <%= f.input :phone_number, label: "Restaurant Phone" %>
+  <%= f.input :category, label: "Restaurant Cusine" %>
+  <%= f.button :submit %>
+<% end %>
