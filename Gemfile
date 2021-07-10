@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faker', '~> 2.18'
 gem 'simple_form', '~> 5.1'
+gem 'font-awesome-sass', '~> 5.15', '>= 5.15.1'
+gem 'autoprefixer-rails', '~> 10.2', '>= 10.2.5.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

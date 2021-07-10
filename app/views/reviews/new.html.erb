@@ -1,0 +1,20 @@
+<h5>This is the Reviews new page</h5>
+<br>
+<br>
+<h1><%= "#{@restaurant.name}" %></h1>
+<h3> <%= "#{@restaurant.address}" %></h3>
+<h4> <%= "#{@restaurant.category}" %> </h4>
+<br>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, label: "Review" %>
+  <br>
+  <br>
+  <%= f.input :rating, label: "Rating"  %>
+  <br>
+  <br>
+  <%= f.button :submit, class: "btn btn-success" %>
+<% end %>
+
+<br>
+<a > <%= link_to "Cancel", restaurants_path  %> </a>

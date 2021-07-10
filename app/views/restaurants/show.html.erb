@@ -8,17 +8,16 @@
 <h3> <%= "#{@restaurant.address}" %></h3>
 <h4> <%= "#{@restaurant.category}" %> </h4>
 <h5>  <%= "#{@restaurant.phone_number}" %> </h5>
-<h5>  <%= "#{@review.rating}" %> </h5>
-<h5>  <%= "#{@review.content}" %> </h5>
-
+<h5>  <% @restaurant.reviews.each do |review| %> </h5>
+<h5>  <%= "#{review.content}" %> </h5>
+<h5>  <%= "Rating: #{review.rating}" %> </h5>
 <br>
+  <% end %>
+<hr>
 <br>
-<a > <%= link_to "Back to Restaurants", restaurants_path %></a>
-<br>
-<br>
-<a > <%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant) %></a>
-<br>
-<br>
+<a > <%= link_to "Back to Restaurants", restaurants_path %></a> |
+<a > <%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant) %></a> |
+<a > <%= link_to "Leave a Review", new_restaurant_review_path(@restaurant) %></a> |
 <a > <%= link_to "Delete Restaurant", restaurant_path(@restaurant), method: :delete %></a>
 <br>
 <br>
